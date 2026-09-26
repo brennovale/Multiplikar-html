@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multiplikar Automóveis — Solicitação de Orçamento e Proposta</title>
+</head>
+<body>
+
+  <header>
+    <p><strong>Multiplikar Automóveis</strong> | Vila São Geraldo</p>
+    <nav aria-label="Navegação principal">
+      <ul>
+        <li><a href="../index.html">Início</a></li>
+        <li><a href="estoque.html">Estoque</a></li>
+        <li><a href="compra-veiculos.html">Compra de Veículos</a></li>
+        <li><a href="consignacao.html">Consignação</a></li>
+        <li><a href="avaliacao.html">Avaliação e Laudo Cautelar</a></li>
+        <li><a href="vendas.html">Vendas e Pagamentos</a></li>
+        <li><a href="financiamento.html">Financiamento</a></li>
+        <li><a href="garantia.html">Garantia e Pós-Venda</a></li>
+        <li><a href="orcamento.html">Orçamento</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <h1>Solicitação de Orçamento — Multiplikar Automóveis</h1>
+      <p>Envie sua proposta comercial ou solicite uma cotação personalizada para compra, venda ou troca de veículos com a nossa equipe.</p>
+    </article>
+
+    <section>
+      <h2>Como Funciona a Análise de Proposta</h2>
+      <p>Na Multiplikar Automóveis, cada proposta é examinada individualmente pela nossa equipe de vendas. Avaliamos a disponibilidade do automóvel no estoque, o valor de mercado para veículos de entrada e as taxas de juros vigentes junto às instituições financeiras parceiras (Itaú, BV, Bradesco, Daycoval, Santander, Banco PAN, C6 Bank, Safra e Volkswagen), visando encontrar a melhor equação financeira para você.</p>
+    </section>
+
+    <section>
+      <h2>Formulário de Solicitação de Orçamento</h2>
+      <p>Preencha atentamente os campos a seguir com as informações sobre a negociação desejada. Campos marcados com asterisco (*) são obrigatórios.</p>
+
+      <form action="orcamento.html" method="post">
+
+        <fieldset>
+          <legend>Dados Pessoais do Cliente</legend>
+
+          <p>
+            <label for="nome_cliente">Nome Completo do Cliente: *</label><br>
+            <input type="text" id="nome_cliente" name="nome_cliente" required minlength="3" maxlength="100" autocomplete="name" placeholder="Ex: Maria Aparecida Santos">
+          </p>
+
+          <p>
+            <label for="documento">CPF ou CNPJ: *</label><br>
+            <input type="text" id="documento" name="documento" required pattern="([0-9]{3}\.?[0-9]{3}\.?[0-9]{3}\-?[0-9]{2}|[0-9]{2}\.?[0-9]{3}\.?[0-9]{3}\/?[0-9]{4}\-?[0-9]{2})" autocomplete="off" title="Informe um CPF válido (000.000.000-00 ou 11 números) ou CNPJ válido (00.000.000/0000-00 ou 14 números)" placeholder="000.000.000-00 ou 00.000.000/0000-00">
+          </p>
+
+          <p>
+            <label for="telefone">Telefone de Contato (WhatsApp ou fixo): *</label><br>
+            <input type="tel" id="telefone" name="telefone" required pattern="\(?[0-9]{2}\)?\s?[0-9]{4,5}\-?[0-9]{4}" autocomplete="tel" title="Informe o DDD seguido do telefone. Exemplo: (11) 98765-4321 ou (12) 3456-7890" placeholder="(99) 99999-9999">
+          </p>
+
+          <p>
+            <label for="email">E-mail: *</label><br>
+            <input type="email" id="email" name="email" required maxlength="120" autocomplete="email" placeholder="cliente@exemplo.com">
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Tipo de Atendimento Pretendido</legend>
+          <p>Selecione a finalidade do seu atendimento: *</p>
+          <p>
+            <input type="radio" id="atendimento_comprar" name="tipo_atendimento" value="comprar" required>
+            <label for="atendimento_comprar">Desejo Comprar um veículo (à vista ou financiado)</label>
+          </p>
+          <p>
+            <input type="radio" id="atendimento_vender" name="tipo_atendimento" value="vender">
+            <label for="atendimento_vender">Desejo Vender meu veículo para a Multiplikar Automóveis</label>
+          </p>
+          <p>
+            <input type="radio" id="atendimento_trocar" name="tipo_atendimento" value="trocar">
+            <label for="atendimento_trocar">Desejo Trocar meu veículo (dar como entrada na compra de outro)</label>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferências e Dados do Negócio</legend>
+
+          <p>
+            <label for="veiculo_interesse">Veículo de Interesse (Marca, Modelo ou Categoria): *</label><br>
+            <input type="text" id="veiculo_interesse" name="veiculo_interesse" required minlength="2" maxlength="100" placeholder="Ex: Chevrolet Onix 1.0, SUV automático, Sedan até R$ 60.000">
+          </p>
+
+          <fieldset>
+            <legend>Preferência quanto ao estado do veículo: *</legend>
+            <p>
+              <input type="radio" id="pref_novo" name="preferencia_veiculo" value="novo" required>
+              <label for="pref_novo">Veículo Novo (0 km)</label>
+            </p>
+            <p>
+              <input type="radio" id="pref_seminovo" name="preferencia_veiculo" value="seminovo">
+              <label for="pref_seminovo">Veículo Seminovo</label>
+            </p>
+            <p>
+              <input type="radio" id="pref_usado" name="preferencia_veiculo" value="usado">
+              <label for="pref_usado">Veículo Usado</label>
+            </p>
+            <p>
+              <input type="radio" id="pref_qualquer" name="preferencia_veiculo" value="indiferente">
+              <label for="pref_qualquer">Sem preferência / Aberto a sugestões</label>
+            </p>
+          </fieldset>
+
+          <p>
+            <label for="valor_disponivel">Valor Disponível para Investimento ou Entrada (em R$):</label><br>
+            <input type="number" id="valor_disponivel" name="valor_disponivel" min="0" step="100" placeholder="Ex: 35000">
+          </p>
+
+          <p>
+            <label for="veiculo_entrada">Possível Veículo para Entrada na Troca (caso possua):</label><br>
+            <input type="text" id="veiculo_entrada" name="veiculo_entrada" maxlength="120" placeholder="Ex: Ford Ka 2017 1.0 Flex - 72.000 km (ou deixe em branco se não houver)">
+          </p>
+
+          <fieldset>
+            <legend>Forma de Pagamento Pretendida: *</legend>
+            <p>
+              <input type="radio" id="pagamento_dinheiro" name="forma_pagamento" value="dinheiro" required>
+              <label for="pagamento_dinheiro">Pagamento em Dinheiro à Vista</label>
+            </p>
+            <p>
+              <input type="radio" id="pagamento_pix" name="forma_pagamento" value="pix">
+              <label for="pagamento_pix">Pagamento via Transferência Instantânea (Pix)</label>
+            </p>
+            <p>
+              <input type="radio" id="pagamento_cartao" name="forma_pagamento" value="cartao">
+              <label for="pagamento_cartao">Cartão de Crédito ou Débito</label>
+            </p>
+            <p>
+              <input type="radio" id="pagamento_financiamento" name="forma_pagamento" value="financiamento">
+              <label for="pagamento_financiamento">Financiamento Bancário (parcelamento)</label>
+            </p>
+            <p>
+              <input type="radio" id="pagamento_misto" name="forma_pagamento" value="combinada">
+              <label for="pagamento_misto">Forma Combinada / Mista (Ex: Entrada + Financiamento + Cartão)</label>
+            </p>
+          </fieldset>
+
+          <p>
+            <label for="observacoes">Observações ou Condições Específicas:</label><br>
+            <textarea id="observacoes" name="observacoes" rows="5" cols="60" maxlength="800" placeholder="Inclua informações adicionais como prazo pretendido de parcelas, cor de preferência ou detalhes do seu carro para troca..."></textarea>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Termos e Confirmação</legend>
+          <p>
+            <input type="checkbox" id="aceite_termos" name="aceite_termos" required>
+            <label for="aceite_termos">Declaro que as informações fornecidas são verídicas e concordo que a equipe comercial da Multiplikar Automóveis elabore a simulação de proposta solicitada. *</label>
+          </p>
+        </fieldset>
+
+        <p>
+          <button type="submit">Solicitar Orçamento</button>
+          <button type="reset">Limpar Dados</button>
+        </p>
+
+      </form>
+    </section>
+
+    <section>
+      <h2>Prazos de Retorno e Esclarecimentos</h2>
+      <p>As solicitações de orçamento recebidas em dias úteis são analisadas por um de nossos consultores comerciais com agilidade. Em casos de simulação de financiamento, faremos a consulta inicial de margem de crédito e tabela de parcelas sem qualquer custo de avaliação.</p>
+    </section>
+  </main>
+
+  <footer>
+    <section aria-labelledby="rodape-contato">
+      <h2 id="rodape-contato">Contato</h2>
+      <address>
+        R. Goiapi, 160 - Vila Sao Geraldo, São Paulo - SP, 03609-010 <br>
+        Telefone: <a href="tel:+551126474000">(11) 2647-4000</a>
+        <br>
+        E-mail: <a href="mailto:multiplikar.oficial@gmail.com">multiplikar.oficial@gmail.com</a>
+        <br>
+        <a href="https://wa.me/551126474000?text=Ol%C3%A1%2C%20vim%20pelo%20site" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        <br>
+        <a href="https://www.facebook.com/Multiplikarconcessionaria" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <br>
+        <a href="https://www.instagram.com/multiplikar.oficial/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </address>
+    </section>
+    <p>Projeto acadêmico de Desenvolvimento Frontend para Web — Integrantes: Andrey Azevedo Veloso e Brenno Lima do Vale.</p>
+    <p>&copy; 2026 Multiplikar Automóveis. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
